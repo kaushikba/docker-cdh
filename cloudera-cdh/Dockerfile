@@ -9,11 +9,12 @@
 # - loicmathieu/cloudera-cdh-datanode : will launch and HDFS datanode and a Yarn NodeManager
 # - loicmathieu/cloudera-cdh-edgenode : will launch a client container to HDFS/Yarn cluster
 ############################################################################################
-FROM loicmathieu/openjdk
+FROM kaushikba/openjdk
 
 MAINTAINER Loic Mathieu <loicmathieu@free.fr>
 
-ENV CDH_VER 5.9.0
+#ENV CDH_VER 5.9.0
+ENV CDH_VER 5.10.0
 
 #copy cloudera CDH repo
 COPY cloudera-cdh-${CDH_VER}.repo /etc/yum.repos.d
